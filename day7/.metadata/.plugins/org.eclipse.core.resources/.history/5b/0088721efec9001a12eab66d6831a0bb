@@ -1,0 +1,47 @@
+package test;
+class Person
+{	String name;
+	int age;
+	public Person() {}
+	public Person(String name, int age) 
+	{
+		super();
+		this.age = age;
+		this.name=name;
+	}	
+	public void showrecord()
+	{
+		System.out.println("name	:"+name);
+		System.out.println("age	:"+age);
+	}
+	
+}
+class Employee extends Person
+{
+	int empid;
+	float salary;
+	public Employee() {}
+	public Employee(String name,int age,int empid,float salary)
+	{
+		super(name,age);
+		this.empid=empid;
+		this.salary=salary;
+	}
+	
+	public void displayrecord()
+	{	super.showrecord();//using super keyword  access the method of superclass
+		System.out.println("empid	:"+empid);
+		System.out.println("salary	:"+salary);
+	}
+}
+
+public class Program
+{
+	public static void main(String[] args) {
+		Person p= new Employee("abc",22,112,67000);
+		p.showrecord();
+	}
+	
+
+}
+

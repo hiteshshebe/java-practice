@@ -1,0 +1,45 @@
+package test;
+class Person
+{	private String name;
+	private int age;
+	public Person() {}
+	public Person(String name, int age) 
+	{
+		super();
+		this.age = age;
+		this.name=name;
+	}	
+	public void printrecord()
+	{
+		System.out.println("name	:"+name);
+		System.out.println("age	:"+age);
+	}
+	
+}
+class Employee extends Person
+{
+	private int empid;
+	private float salary;
+	public Employee() {}
+	public Employee(String name,int age,int empid,float salary)
+	{
+		super(name,age);
+		this.empid=empid;
+		this.salary=salary;
+	}
+	
+	public void printrecord()
+	{
+		System.out.println("empid	:"+empid);
+		System.out.println("salary	:"+salary);
+	}
+}
+
+public class Program
+{
+	public static void main(String[] args) {
+		Employee emp=new Employee("abc",23,112,46000f);
+		emp.printrecord();
+	}
+}
+
